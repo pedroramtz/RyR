@@ -33,8 +33,8 @@ class CommentsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should update comment" do
-    patch comment_url(@comment), params: { comment: { body: @comment.body, post_id: @comment.post_id } }
+ test "should update comment" do
+  patch comment_url(@comment), params: { comment: { body: @comment.body, post_id: @comment.post_id } }
     assert_redirected_to comment_url(@comment)
   end
 
